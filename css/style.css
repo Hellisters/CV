@@ -1,0 +1,1182 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth !important;
+    transition: all 0.25s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+#website {
+    display: block;
+}
+
+#print-content {
+    display: none;
+}
+
+#Responsive-Layout {
+    display: none;
+}
+
+:root {
+    /* ---------- gradient ---------- */
+    --gradient1: linear-gradient(to right, black, #63B4B8, #A9E4D7);
+    /* ------- Personal image ------- */
+    --width-perso: 15vw;
+    --width-roller: 20vw;
+    /* ------- logos ------- */
+    --height-logos: 10vw;
+    --width-logos: 10vw;
+    --height-logos2: 7vw;
+    --width-logos2: 7vw;
+    --height-logos-socials: 6.6vw;
+    --width-logos-socials: 6.6vw;
+    --height-logos-skills: 9.5vw;
+    --width-logos-skills: 9.5vw;
+    /* ------- rows ------- */
+    --first-row-h: auto;
+    --second-row-h: auto;
+    --third-row-h: auto;
+    /* ------- fonts ------- */
+    --font: antapani;
+    --font2: facon;
+    /* ------- nav ------- */
+    --font-nav: 1.5vw;
+    --color2: rgb(47, 194, 194);
+    --color1: white;
+    /* ------- sections ------- */
+    --sec-width: 50%;
+    --sec-width-personal: 35%;
+    --sec-width-aboutme: 65%;
+    --sec-header-w-aboutme: 4ch;
+    --sec-header-w: 6.5ch;
+    --sec-header-social-w: 5ch;
+    --sec-header-qual-w: 5ch;
+    --aboutme-sec-fsize: 25px;
+    --qualification-fsize: 1.5vw;
+    --page-head-size: 1.8vw;
+    /* ----- color scheme ---- */
+    --background-color: rgb(251, 251, 251);
+    --mode-outer-border: black;
+    --mode-outer: black;
+    --mode-inner: rgba(253, 252, 207, 0.842);
+    --font-color: black;
+    --caret-color: rgb(112, 108, 96);
+    --content-background: rgba(202, 200, 200, 0.733);
+    --collapse-middle: black;
+    --collapse-sides: black;
+    --date-line: rgb(132, 144, 22);
+    --hyper-color: rgb(76, 168, 190);
+    --footer-color: rgba(170, 164, 164, 0.582);
+    --animation-color: rgba(170, 164, 164, 0.733);
+}
+
+body {
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+header {
+    font-family: facon;
+}
+
+@font-face {
+    font-family: relapse;
+    src: url(relapse/RElapse\ Regular.ttf);
+}
+
+@font-face {
+    font-family: antapani;
+    src: url(antapani/Antapani-ExtraBold.otf);
+}
+
+@font-face {
+    font-family: facon;
+    src: url(facon/Facon.ttf);
+}
+
+.change-back {
+    background-color: var(--content-background);
+}
+
+
+/* ------------------------- Animation Menu ------------------------- */
+
+.menu-animate {
+    padding: 10px;
+}
+
+.menu-animate:hover {
+    animation: reduceBorder 1s infinite;
+}
+
+@keyframes reduceBorder {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* ------------------------- Dark or Light Mode ------------------------- */
+
+.mode-outer {
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    border: 0.5vw solid var(--mode-outer-border);
+    background: var(--mode-outer);
+    border-radius: 50%;
+    z-index: 50;
+    right: 0;
+    margin: 3% 3% auto auto;
+}
+
+.mode-outer {
+    cursor: pointer;
+}
+
+.mode-inner {
+    position: absolute;
+    width: 50%;
+    height: inherit;
+    margin: auto;
+    padding: 0;
+    border-radius: 4vw 0 0 4vw;
+    background: var(--mode-inner);
+}
+
+
+/* ------------------------- First row ------------------------- */
+
+.First-Row {
+    position: relative;
+    height: var(--first-row-h);
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5%;
+    width: 100%;
+    background-color: var(--background-color);
+    font-family: var(--font);
+    color: var(--font-color);
+}
+
+#position-aboutme {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#AboutHead {
+    font-family: var(--font2);
+    font-size: var(--page-head-size);
+    padding-bottom: var(--sec-header-w-aboutme);
+    height: fit-content;
+    position: relative;
+    text-align: center;
+    width: 100vw;
+    left: 0;
+    right: 0;
+}
+
+
+/* ------------------------- Personal Img & animation ------------------------- */
+
+#Personal-Image-Section {
+    position: relative;
+    width: var(--sec-width-personal);
+    height: 60vh;
+    text-align: center;
+}
+
+#personal-img {
+    position: absolute;
+    width: var(--width-perso);
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#roller {
+    position: absolute;
+    width: var(--width-roller);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: firstRoller 5s infinite;
+}
+
+#wrap-perso {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+}
+
+#wrap-perso:hover #roller {
+    animation: expandRoller 1s infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes firstRoller {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes expandRoller {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* ------------------------- About me and animation ------------------------- */
+
+#AboutMe-section {
+    font-size: var(--aboutme-sec-fsize);
+    position: relative;
+    width: var(--sec-width-aboutme);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.emptySection {
+    margin: 0 auto;
+    position: relative;
+    width: fit-content;
+}
+
+.emptySection p {
+    font-size: 2vw;
+}
+
+#AboutMe-section .emptySection:nth-child(1) p {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typingEffect 3.5s steps(50, end), blinkCaret .75s step-end infinite;
+}
+
+#AboutMe-section .emptySection:nth-child(2) p {
+    visibility: hidden;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typingEffect2 3.5s steps(50, end), blinkCaret .75s step-end infinite;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+#AboutMe-section .emptySection:nth-child(3) p {
+    visibility: hidden;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typingEffect3 3.5s steps(50, end), blinkCaret .75s step-end infinite;
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+}
+
+#AboutMe-section .emptySection:nth-child(4) p {
+    visibility: hidden;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typingEffect4 3.5s steps(50, end), blinkCaret .75s step-end infinite;
+    animation-delay: 12s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes typingEffect {
+    0% {
+        border-right: .15em solid var(--caret-color);
+        width: 0;
+    }
+    90% {
+        width: 100%;
+    }
+    98% {
+        border-right: .15em solid var(--caret-color);
+    }
+    100% {
+        border-right: 0;
+    }
+}
+
+@keyframes typingEffect2 {
+    0% {
+        visibility: visible;
+        border-right: .15em solid var(--caret-color);
+        width: 0;
+    }
+    90% {
+        width: 100%;
+    }
+    98% {
+        border-right: .15em solid var(--caret-color);
+    }
+    100% {
+        visibility: visible;
+        border-right: 0;
+    }
+}
+
+@keyframes typingEffect3 {
+    0% {
+        visibility: visible;
+        border-right: .15em solid var(--caret-color);
+        width: 0;
+    }
+    90% {
+        width: 100%;
+    }
+    98% {
+        border-right: .15em solid var(--caret-color);
+    }
+    100% {
+        visibility: visible;
+        border-right: 0;
+    }
+}
+
+@keyframes typingEffect4 {
+    0% {
+        visibility: visible;
+        border-right: .15em solid var(--caret-color);
+        width: 0;
+    }
+    90% {
+        width: 100%;
+    }
+    98% {
+        border-right: .15em solid var(--caret-color);
+    }
+    100% {
+        visibility: visible;
+        border-right: 0;
+    }
+}
+
+@keyframes blinkCaret {
+    0% {
+        visibility: visible;
+        border-color: var(--caret-color);
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        visibility: visible;
+        border-color: var(--caret-color);
+    }
+}
+
+
+/* ------------------------- Second row ------------------------- */
+
+.Second-Row {
+    position: relative;
+    height: var(--second-row-h);
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    padding: 4% 0 4% 0;
+    transition: all 2s ease;
+    opacity: 0;
+    display: none;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#Skills-section {
+    position: relative;
+    max-width: 100%;
+}
+
+#position-skills {
+    max-width: 100%;
+    height: 100%;
+    margin: 0 10vw 0 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    justify-content: center;
+}
+
+.box-containers {
+    left: 0;
+    right: 0;
+    margin: 2vw;
+    padding: 0;
+    width: var(--width-logos);
+    height: var(--height-logos);
+}
+
+.box-containers img {
+    width: inherit;
+    height: inherit;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: relative;
+    justify-content: center;
+}
+
+#position-skills .box-containers img:hover {
+    width: var(--width-logos-skills);
+    height: var(--width-logos-skills);
+    animation: skillsAnimate 1.4s ease-in-out infinite;
+}
+
+#position-socials .box-containers img:hover {
+    width: var(--width-logos-socials);
+    height: var(--height-logos-socials);
+    animation: skillsAnimate 1.4s infinite;
+}
+
+.box-containers a {
+    width: inherit;
+    height: inherit;
+}
+
+@keyframes skillsAnimate {
+    0% {
+        border: 5px solid rgba(61, 153, 99, 0);
+        border-radius: 50%;
+    }
+    50% {
+        border: 5px solid rgb(134, 189, 159);
+        border-radius: 50%;
+    }
+    100% {
+        border: 5px solid rgba(61, 153, 99, 0);
+        border-radius: 50%;
+    }
+}
+
+
+/* ------------------------- Third row ------------------------- */
+
+.Third-Row {
+    position: relative;
+    height: var(--third-row-h);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10vh 0 10vh 0;
+    width: 80%;
+    font-family: var(--font);
+    transition: all 2s ease;
+    opacity: 0;
+    display: none;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#Qualifications-section {
+    position: relative;
+    max-width: 100%;
+}
+
+.position-qualifications {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--qualification-fsize);
+    color: var(--font-color);
+    margin: 10ch 5vw 12ch 5vw;
+}
+
+.date-line {
+    margin: 3ch auto 3ch auto;
+    left: 0;
+    right: 0;
+    height: 20ch;
+    width: 0.2vw;
+    border-radius: 50%;
+    background-color: var(--date-line);
+}
+
+.Date-section {
+    text-align: center;
+    width: 40%;
+    height: auto;
+}
+
+.Info-section {
+    position: relative;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 60%;
+}
+
+.Info-section a {
+    text-decoration: none;
+    color: var(--hyper-color);
+}
+
+
+/* ------------------------- Fourth Row ------------------------- */
+
+.Fourth-Row {
+    position: relative;
+    height: var(--third-row-h);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10vh 0 10vh 0;
+    width: 80%;
+    font-family: var(--font);
+    transition: all 2s ease;
+    opacity: 0;
+    display: none;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: var(--font-color);
+}
+
+#Contact-section {
+    position: relative;
+    max-width: 100%;
+}
+
+.position-contact {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--qualification-fsize);
+    margin: 0ch 5vw 5ch 5vw;
+}
+
+.headings-section {
+    text-align: right;
+    width: 25%;
+    margin-left: 5%;
+}
+
+.headings-section img {
+    width: inherit;
+    height: inherit;
+}
+
+.Info-section {
+    text-align: left;
+    position: relative;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+}
+
+#socialHead {
+    font-size: 2.5vw;
+    padding-bottom: var(--sec-header-social-w);
+    margin-top: 7ch;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+#position-socials {
+    max-width: 100%;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1%;
+}
+
+#position-socials .box-containers {
+    width: var(--width-logos2);
+    height: var(--height-logos2);
+}
+
+
+/* ------------------------- Footer ------------------------- */
+
+.footer-container {
+    margin-top: 5%;
+    position: relative;
+    width: 100%;
+    height: 6vw;
+    padding: 0;
+    background: var(--footer-color);
+    color: var(--font-color);
+}
+
+.footer-content {
+    position: relative;
+    font-size: 1.2vw;
+    font-family: var(--font);
+    width: fit-content;
+    height: fit-content;
+    top: 40%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+/* ------------------------- Print Version ------------------------- */
+
+.cv-header {
+    padding: 2ch 0 2ch 0;
+    font-size: 2vw;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#print-top-1 {
+    position: relative;
+    width: 70%;
+    margin: 0;
+    text-align: right;
+}
+
+#print-top-2 {
+    padding-left: 5%;
+    text-align: left;
+    position: relative;
+    width: 30%;
+    margin: 0;
+}
+
+#print-content {
+    background-color: white;
+}
+
+.print-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+.first-section {
+    width: 40%;
+}
+
+.middle-section {
+    width: fit-content;
+    margin: auto;
+}
+
+#middle-hr {
+    position: relative;
+    height: 100ch;
+}
+
+.second-section {
+    width: 40%;
+}
+
+span {
+    font-weight: bold;
+    padding-right: 2%;
+}
+
+#print-img {
+    border-radius: 50%;
+    width: 10vw;
+}
+
+
+/* ------------------------- Responsive content ------------------------- */
+
+#responsive-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 35px;
+    height: 35px;
+    margin: auto 4vw auto auto;
+    border: 5px solid rgb(81, 206, 252);
+    border-radius: 50%;
+}
+
+#res-icon-content {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    justify-content: center;
+}
+
+.res-bars {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    height: 4px;
+    margin: 8% auto;
+    background-color: white;
+}
+
+#res-menu {
+    position: absolute;
+    right: 0;
+    margin-top: 10ch;
+    background-color: rgb(76, 146, 172);
+    height: auto;
+    display: none;
+    border-radius: 0 0 0 15px;
+}
+
+#res-menu a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--font);
+}
+
+#res-menu li {
+    text-align: center;
+    list-style: none;
+}
+
+.res-options {
+    margin: 5ch 5vw;
+}
+
+
+/* ---------------  Adjusting Content For Responsiveness ----------------- */
+
+@media print {
+    #website {
+        display: none;
+    }
+    #print-content {
+        display: block;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #AboutMe-section {
+        padding-top: 10%;
+        padding-bottom: 10%;
+        width: 100%;
+    }
+    .First-Row {
+        padding: 5% 0 5% 0;
+    }
+    #Personal-Image-Section {
+        margin: auto;
+        width: 100%;
+        height: 20vh;
+    }
+    .Second-Row {
+        height: auto;
+        padding: 10vh 0 10vh 0;
+    }
+    .Third-Row {
+        height: auto;
+        padding: 10vh 0 10vh 0;
+    }
+    .Fourth-Row {
+        height: auto;
+        padding: 12vh 0 10vh 0;
+    }
+}
+
+@media screen and (min-width: 660px) and (max-width: 960px) {
+    #Personal-Image-Section {
+        margin: 5%;
+        width: 100%;
+        height: 20vh;
+    }
+    .Third-Row {
+        height: auto;
+        padding: 12vh 0 10vh 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #Responsive-Layout {
+        display: block;
+    }
+    .main-menu {
+        display: none;
+    }
+    #responsive-icon:active~#res-menu,
+    #responsive-icon:focus~#res-menu {
+        display: block;
+        z-index: 5;
+    }
+    #res-menu:active {
+        display: block;
+        z-index: 5;
+    }
+    .Third-Row {
+        height: auto;
+        padding: 12vh 0 10vh 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #Personal-Image-Section {
+        margin: 5%;
+        width: 100%;
+        height: 10vh;
+    }
+    .Second-Row {
+        height: auto;
+        padding: 5vh 0 5vh 0;
+    }
+    .Fourth-Row {
+        height: auto;
+        padding: 12vh 0 10vh 0;
+    }
+    .Third-Row {
+        height: auto;
+        padding: 5vh 0 5vh 0;
+    }
+}
+
+
+/* ----------------------------------- Collapsible ----------------------------------- */
+
+
+/* Animation for right side */
+
+.fromRight {
+    animation: fromRight 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.fromRight2 {
+    animation: fromRight2 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.RightReverse {
+    animation: RightReverse 1s ease-in-out;
+}
+
+.RightReverse2 {
+    animation: RightReverse2 1s ease-in-out;
+}
+
+@keyframes fromRight {
+    0% {
+        background: linear-gradient(to right, transparent 50%, var(--animation-color) 50%);
+        background-size: 200% 100%;
+        background-position: left;
+    }
+    100% {
+        background: linear-gradient(to right, transparent 50%, cyan 50%);
+        background-size: 200% 100%;
+        background-position: right;
+    }
+}
+
+@keyframes fromRight2 {
+    0% {
+        background: linear-gradient(to right, transparent 50%, var(--animation-color) 50%);
+        background-size: 200% 100%;
+        background-position: left;
+    }
+    100% {
+        background: linear-gradient(to right, transparent 50%, var(--animation-color) 50%);
+        background-size: 200% 100%;
+        background-position: right;
+    }
+}
+
+@keyframes RightReverse {
+    from {
+        background: linear-gradient(to right, transparent 50%, var(--animation-color) 50%);
+        background-size: 200% 100%;
+        background-position: right;
+    }
+    to {
+        background: linear-gradient(to right, transparent 50%, var(--animation-color) 50%);
+        background-size: 200% 100%;
+        background-position: left;
+    }
+}
+
+@keyframes RightReverse2 {
+    from {
+        background: linear-gradient(to right, transparent 50%, var(--animation-color) 50%);
+        background-size: 200% 100%;
+        background-position: right;
+    }
+    to {
+        background: linear-gradient(to right, transparent 50%, var(--animation-color) 50%);
+        background-size: 200% 100%;
+        background-position: left;
+    }
+}
+
+
+/* Animation for left side */
+
+.fromLeft {
+    animation: fromLeft 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.LeftReverse {
+    animation: LeftReverse 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fromLeft {
+    0% {
+        background: linear-gradient(to left, transparent 50%, var(--animation-color) 50%);
+        background-size: 200% 100%;
+        background-position: right;
+    }
+    100% {
+        background: linear-gradient(to left, transparent 50%, var(--animation-color) 50%);
+        background-size: 200% 100%;
+        background-position: left;
+    }
+}
+
+@keyframes LeftReverse {
+    from {
+        background: linear-gradient(to left, transparent 50%, var(--animation-color) 50%);
+        background-size: 200% 100%;
+        background-position: left;
+    }
+    to {
+        background: linear-gradient(to left, transparent 50%, var(--animation-color) 50%);
+        background-size: 200% 100%;
+        background-position: right;
+    }
+}
+
+.opacityIncrease {
+    animation: opacityIncrease 3s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opacityIncrease {
+    100% {
+        opacity: 1;
+    }
+}
+
+.opacityDecrease {
+    animation: opacityDecrease 0.75s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opacityDecrease {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* ----- Collapsible skills ----- */
+
+.clickable-skills {
+    font-family: var(--font2);
+    font-size: 1.5vw;
+    position: relative;
+    color: var(--font-color);
+    z-index: 50;
+    border: 3px solid var(--collapse-middle);
+    width: 35vw;
+    height: 1vw;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 1.5% 4% 2% 4%;
+    border-radius: 30px;
+}
+
+.clickable-skills:hover {
+    cursor: pointer;
+}
+
+.frame-skills-left {
+    position: relative;
+    z-index: 50;
+    border: 2px solid var(--collapse-sides);
+    width: 100%;
+    height: 1vw;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto 0;
+    border-right: 0;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.frame-skills-right {
+    position: relative;
+    z-index: 50;
+    border: 2px solid var(--collapse-sides);
+    width: 100%;
+    height: 1vw;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto 0;
+    border-left: 0;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.skills-wrapper {
+    margin: 5% 10%;
+    display: flex;
+    width: 100% auto;
+    justify-content: center;
+}
+
+
+/* ----- Collapsible qualifications ----- */
+
+.clickable-qual {
+    font-family: var(--font2);
+    font-size: 1.5vw;
+    position: relative;
+    color: var(--font-color);
+    z-index: 50;
+    border: 3px solid var(--collapse-middle);
+    width: 35vw;
+    height: 1vw;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 1.5% 4% 2% 4%;
+    border-radius: 30px;
+}
+
+.clickable-qual:hover {
+    cursor: pointer;
+}
+
+.frame-qual-left {
+    position: relative;
+    z-index: 50;
+    border: 2px solid var(--collapse-sides);
+    width: 100%;
+    height: 1vw;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto 0;
+    border-right: 0;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.frame-qual-right {
+    position: relative;
+    z-index: 50;
+    border: 2px solid var(--collapse-sides);
+    width: 100%;
+    height: 1vw;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto 0;
+    border-left: 0;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.qual-wrapper {
+    margin: 5% 10%;
+    display: flex;
+    width: 100% auto;
+    justify-content: center;
+}
+
+
+/* ----- Collapsible contact ----- */
+
+.clickable-contact {
+    font-family: var(--font2);
+    font-size: 1.5vw;
+    position: relative;
+    color: var(--font-color);
+    z-index: 50;
+    border: 3px solid var(--collapse-middle);
+    width: 35vw;
+    height: 1vw;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 1.5% 4% 2% 4%;
+    border-radius: 30px;
+}
+
+.clickable-contact:hover {
+    cursor: pointer;
+}
+
+.frame-contact-left {
+    position: relative;
+    z-index: 50;
+    border: 2px solid var(--collapse-sides);
+    width: 100%;
+    height: 1vw;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto 0;
+    border-right: 0;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.frame-contact-right {
+    position: relative;
+    z-index: 50;
+    border: 2px solid var(--collapse-sides);
+    width: 100%;
+    height: 1vw;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto 0;
+    border-left: 0;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.Contact-wrapper {
+    margin: 5% 10%;
+    display: flex;
+    width: 100% auto;
+    justify-content: center;
+}
