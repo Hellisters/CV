@@ -16,11 +16,11 @@ function Mode() {
             document.documentElement.style.setProperty("--collapse-sides", "white");
             document.documentElement.style.setProperty("--animation-color", "white");
             document.documentElement.style.setProperty("--date-line", "rgb(255, 253, 130)");
-            document.documentElement.style.setProperty("--mode-outer-border", "rgba(253, 252, 207, 0.842)");
+            document.documentElement.style.setProperty("--mode-outer-border", "rgba(253, 252, 207, 0.1)");
             document.documentElement.style.setProperty("--mode-outer", "rgba(253, 252, 207, 0.842)");
             document.documentElement.style.setProperty("--mode-inner", "black");
             document.documentElement.style.setProperty("--caret-color", "cyan");
-            document.documentElement.style.setProperty("--footer-color", "rgba(65, 65, 65, 0.789)");
+            document.documentElement.style.setProperty("--footer-color", "rgba(40, 40, 40, 0.9)");
             document.documentElement.style.setProperty("--logo-skill-hovercolor", "rgb(183, 238, 208)");
         }, 100);
 
