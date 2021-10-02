@@ -231,29 +231,12 @@ header {
     width: fit-content;
 }
 
-#wrap-perso:hover #roller {
-    animation: expandRoller 1s infinite;
-    animation-fill-mode: forwards;
-}
-
 @keyframes firstRoller {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
-    }
-}
-
-@keyframes expandRoller {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.15);
-    }
-    100% {
-        transform: scale(1);
     }
 }
 
