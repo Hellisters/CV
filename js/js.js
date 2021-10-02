@@ -20,6 +20,7 @@ function Mode() {
             document.documentElement.style.setProperty("--mode-outer", "rgba(253, 252, 207, 0.842)");
             document.documentElement.style.setProperty("--mode-inner", "black");
             document.documentElement.style.setProperty("--caret-color", "cyan");
+            document.documentElement.style.setProperty("--footer-color", "rgba(65, 65, 65, 0.789)");
         }, 100);
 
         checkMode = false;
@@ -38,6 +39,7 @@ function Mode() {
             document.documentElement.style.setProperty("--mode-inner", "rgba(253, 252, 207, 0.842)");
             document.documentElement.style.setProperty("--caret-color", "rgb(112, 108, 96)");
             document.documentElement.style.setProperty("--animation-color", "rgba(170, 164, 164, 0.733)");
+            document.documentElement.style.setProperty("--footer-color", "rgba(170, 164, 164, 0.582)");
         }, 100);
 
         checkMode = true;
