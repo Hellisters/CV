@@ -32,8 +32,8 @@ a {
     --width-logos: 10vw;
     --height-logos2: 7vw;
     --width-logos2: 7vw;
-    --height-logos-socials: 6.6vw;
-    --width-logos-socials: 6.6vw;
+    --height-logos-socials: 6.55vw;
+    --width-logos-socials: 6.55vw;
     --height-logos-skills: 9.6vw;
     --width-logos-skills: 9.6vw;
     /* ------- rows ------- */
@@ -65,14 +65,14 @@ a {
     --mode-inner: rgba(253, 252, 207, 0.842);
     --font-color: black;
     --caret-color: rgb(112, 108, 96);
-    --content-background: rgba(202, 200, 200, 0.733);
+    --content-background: rgba(226, 222, 222, 0.685);
     --collapse-middle: black;
     --collapse-sides: black;
     --date-line: rgb(132, 144, 22);
     --hyper-color: rgb(76, 168, 190);
     --footer-color: rgba(170, 164, 164, 0.582);
     --animation-color: rgba(170, 164, 164, 0.733);
-    --logo-skill-hovercolor: white;
+    --logo-skill-hovercolor: rgba(170, 164, 164, 0.733);
 }
 
 body {
@@ -454,15 +454,15 @@ header {
 
 @keyframes skillsAnimate {
     0% {
-        border: 8px solid transparent;
+        border: 7px solid transparent;
         border-radius: 50%;
     }
     50% {
-        border: 8px solid var(--logo-skill-hovercolor);
+        border: 7px solid var(--logo-skill-hovercolor);
         border-radius: 50%;
     }
     100% {
-        border: 8px solid transparent;
+        border: 7px solid transparent;
         border-radius: 50%;
     }
 }

@@ -41,7 +41,7 @@ function Mode() {
             document.documentElement.style.setProperty("--caret-color", "rgb(112, 108, 96)");
             document.documentElement.style.setProperty("--animation-color", "rgba(170, 164, 164, 0.733)");
             document.documentElement.style.setProperty("--footer-color", "rgba(170, 164, 164, 0.582)");
-            document.documentElement.style.setProperty("--logo-skill-hovercolor", "white");
+            document.documentElement.style.setProperty("--logo-skill-hovercolor", "rgba(170, 164, 164, 0.733)");
         }, 100);
 
         checkMode = true;
