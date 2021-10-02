@@ -34,8 +34,8 @@ a {
     --width-logos2: 7vw;
     --height-logos-socials: 6.6vw;
     --width-logos-socials: 6.6vw;
-    --height-logos-skills: 9.5vw;
-    --width-logos-skills: 9.5vw;
+    --height-logos-skills: 9.6vw;
+    --width-logos-skills: 9.6vw;
     /* ------- rows ------- */
     --first-row-h: auto;
     --second-row-h: auto;
@@ -72,6 +72,7 @@ a {
     --hyper-color: rgb(76, 168, 190);
     --footer-color: rgba(170, 164, 164, 0.582);
     --animation-color: rgba(170, 164, 164, 0.733);
+    --logo-skill-hovercolor: white;
 }
 
 body {
@@ -453,15 +454,15 @@ header {
 
 @keyframes skillsAnimate {
     0% {
-        border: 5px solid rgba(61, 153, 99, 0);
+        border: 8px solid transparent;
         border-radius: 50%;
     }
     50% {
-        border: 5px solid rgb(134, 189, 159);
+        border: 8px solid var(--logo-skill-hovercolor);
         border-radius: 50%;
     }
     100% {
-        border: 5px solid rgba(61, 153, 99, 0);
+        border: 8px solid transparent;
         border-radius: 50%;
     }
 }
@@ -835,6 +836,10 @@ span {
         height: auto;
         padding: 12vh 0 10vh 0;
     }
+    .Fourth-Row {
+        height: auto;
+        padding: 8vh 0 8vh 0;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -849,7 +854,7 @@ span {
     }
     .Fourth-Row {
         height: auto;
-        padding: 12vh 0 10vh 0;
+        padding: 6vh 0 5vh 0;
     }
     .Third-Row {
         height: auto;
