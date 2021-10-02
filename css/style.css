@@ -454,15 +454,15 @@ header {
 
 @keyframes skillsAnimate {
     0% {
-        border: 7px solid transparent;
+        border: 0.4vw solid transparent;
         border-radius: 50%;
     }
     50% {
-        border: 7px solid var(--logo-skill-hovercolor);
+        border: 0.4vw solid var(--logo-skill-hovercolor);
         border-radius: 50%;
     }
     100% {
-        border: 7px solid transparent;
+        border: 0.4vw solid transparent;
         border-radius: 50%;
     }
 }
